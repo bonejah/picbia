@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+.break-word {
+  word-break: break-all;
+}
+
+.btn-primary {
+  background-color: pink !important;
+  border-color: pink !important;
+}
+
+.btn-primary:hover {
+  background-color: lightpink !important;
+  border-color: lightpink !important;
+}
+
+.btn-primary:focus {
+  background-color: lightpink !important;
+  border-color: lightpink !important;
+}
+
+a {
+  color: pink !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: lightpink !important;
+  text-decoration: none !important;
+}
+
+a:focus {
+  color: lightpink !important;
+  text-decoration: none !important;
+}

@@ -1,0 +1,7 @@
+.unicorn {
+  background-image: url("../../assets/img/unicornio.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 900px;
+  height: 600px;
+}

@@ -1,0 +1,25 @@
+<div class="bg-white border" *ngIf="(picture$ | async) as picture">
+  <div class="row">
+    <div class="col-lg-8">
+      <app-picture [url]="picture.url" [description]="picture.description"></app-picture>
+    </div>
+    <div class="col-lg-4 p-4">
+      <small>
+        <p class="text-left break-word">{{ picture.description }}</p>
+        <div class="text-left mb-4">
+          <i showIfLogged (click)="like(picture)" class="fa fa-heart-o fa-2x mr-2 pull-left">{{ picture.likes }}</i>
+          <i class="fa fa-comment-o fa-2x mr-2 ml-2">{{ picture.comments }}</i>
+          <i pictureOwnerOnly [ownedPicture]="picture" (click)="remove()" class="fa fa-trash-o fa-2x pull-right"></i>
+        </div>
+        <hr>
+      </small>
+      <app-picture-comments 
+        *ngIf="picture.allowComments; else warning"
+        [pictureId]="pictureId">
+      </app-picture-comments>
+      <ng-template #warning>
+        <p>User has disabled comments for this picture.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
